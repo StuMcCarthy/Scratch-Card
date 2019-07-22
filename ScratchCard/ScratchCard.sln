@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScratchCard.Core", "ScratchCard.Core\ScratchCard.Core.csproj", "{B357416E-29B6-45DD-97A1-7F310351C9AB}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ScratchCard.FrontEnd", "ScratchCard.FrontEnd\ScratchCard.FrontEnd.vbproj", "{21F231F8-7612-48A1-B001-00C993006014}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScratchCard.FrontEnd", "ScratchCard.FrontEnd\ScratchCard.FrontEnd.csproj", "{E67043F6-1192-4B60-B1EE-9C2994FDB202}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B357416E-29B6-45DD-97A1-7F310351C9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B357416E-29B6-45DD-97A1-7F310351C9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B357416E-29B6-45DD-97A1-7F310351C9AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21F231F8-7612-48A1-B001-00C993006014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21F231F8-7612-48A1-B001-00C993006014}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21F231F8-7612-48A1-B001-00C993006014}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21F231F8-7612-48A1-B001-00C993006014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67043F6-1192-4B60-B1EE-9C2994FDB202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67043F6-1192-4B60-B1EE-9C2994FDB202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67043F6-1192-4B60-B1EE-9C2994FDB202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67043F6-1192-4B60-B1EE-9C2994FDB202}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
