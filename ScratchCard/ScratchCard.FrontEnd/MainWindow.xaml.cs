@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ScratchCard.Core;
 
 namespace ScratchCard.FrontEnd
 {
@@ -23,6 +24,8 @@ namespace ScratchCard.FrontEnd
         public MainWindow()
         {
             InitializeComponent();
+            TileSet tileSet = new TileSet(9);
+            tileSet.IsWinner();
         }
     }
 }

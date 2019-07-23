@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScratchCard.Core\ScratchCard.Core.csproj">
+      <Project>{b357416e-29b6-45dd-97a1-7f310351c9ab}</Project>
+      <Name>ScratchCard.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
