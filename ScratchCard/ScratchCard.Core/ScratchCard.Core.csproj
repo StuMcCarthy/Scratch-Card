@@ -46,6 +46,7 @@
     <Compile Include="TileTypes\Tile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TileSet.cs" />
+    <Compile Include="WinRateManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

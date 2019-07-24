@@ -34,8 +34,8 @@ namespace ScratchCard.Core.TileTypes
             }
         }
 
-        public PictureTile(Random seed)
-            : base(seed)
+        public PictureTile()
+            : base()
         {
 
         }

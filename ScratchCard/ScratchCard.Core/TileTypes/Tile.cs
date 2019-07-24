@@ -10,9 +10,8 @@ namespace ScratchCard.Core.TileTypes
     {
         public int Index { get; set; }
 
-        public Tile(Random seed)
+        public Tile()
         {
-            Index = seed.Next(0,6);
         }
     }
 }

@@ -25,7 +25,6 @@ namespace ScratchCard.FrontEnd
         {
             InitializeComponent();
             TileSet tileSet = new TileSet(9);
-            tileSet.IsWinner();
         }
     }
 }
