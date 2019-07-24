@@ -24,7 +24,7 @@ namespace ScratchCard.FrontEnd
         public MainWindow()
         {
             InitializeComponent();
-            TileSet tileSet = new TileSet(9);
+            TileCard tileSet = new TileCard(9);
         }
     }
 }

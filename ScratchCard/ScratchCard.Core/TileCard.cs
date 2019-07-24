@@ -7,12 +7,12 @@ using ScratchCard.Core.TileTypes;
 
 namespace ScratchCard.Core
 {
-    public class TileSet
+    public class TileCard
     {
         readonly List<Tile> Tiles;
         WinRateManager winManager;
 
-        public TileSet(int numberOfTiles)
+        public TileCard(int numberOfTiles)
         {
             winManager = new WinRateManager();
 
