@@ -27,12 +27,20 @@ namespace ScratchCard.FrontEnd.Cards
             InitializeComponent();
             card = new BasicCard();
             labelCashAmount.Content = string.Format("£{0}", card.WinValue);
-            labelIsWinner.Content = card.IsWinner;
+            labelIsWinner.Content = DisplayIsWinner(card);
         }
 
         private void RevealLabel(Label labelToReveal)
         {
             labelToReveal.Visibility = Visibility.Visible;
+        }
+
+        private string DisplayIsWinner(BasicCard card)
+        {
+            if (card.IsWinner)
+                return "You Won!!!";
+            else
+                return "Better Luck Next Time!";
         }
 
         private void BtnRevealAmount_Click(object sender, RoutedEventArgs e)
@@ -45,11 +53,6 @@ namespace ScratchCard.FrontEnd.Cards
         private void BtnRevealWinner_Click(object sender, RoutedEventArgs e)
         {
             RevealLabel(labelIsWinner);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -12,7 +12,6 @@
         <Button x:Name="btnRevealAmount" Content="Reveal Amount" HorizontalAlignment="Center" Margin="80,112,81.6,0" VerticalAlignment="Top" Width="160" Height="28" Click="BtnRevealAmount_Click"/>
         <Label x:Name="labelIsWinner" Visibility="Hidden" Content="" HorizontalAlignment="Center" Margin="24,161,23.6,0" VerticalAlignment="Top" Width="274" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
         <Button x:Name="btnRevealWinner" Visibility="Hidden" Content="Are You a Winner?" HorizontalAlignment="Center" Margin="80,207,81.6,0" VerticalAlignment="Top" Width="160" Height="28" Click="BtnRevealWinner_Click" IsEnabled="False"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click"/>
 
     </Grid>
 </Window>
