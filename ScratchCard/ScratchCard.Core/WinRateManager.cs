@@ -18,6 +18,7 @@ namespace ScratchCard.Core
         private readonly int midWinIndex = 1;
         private readonly int highWinIndex = 2;
 
+
         Random random;
         public WinRateManager()
         {

@@ -10,6 +10,8 @@ namespace ScratchCard.Core
     {
         WinRateManager winManager;
         public readonly decimal WinValue;
+        public readonly bool IsWinner;
+        Random random = new Random(DateTime.Now.Millisecond);
 
         public BasicCard()
         {
@@ -17,16 +19,16 @@ namespace ScratchCard.Core
             switch (winManager.winRarity)
             {
                 case 0:
-                    WinValue = WinValues.LowWinValues.ElementAt(new Random().Next(0, 2));
+                    WinValue = WinValues.LowWinValues.ElementAt(random.Next(0, WinValues.numberOfWinTypes));
                     break;
                 case 1:
-                    WinValue = WinValues.MidWinValues.ElementAt(new Random().Next(0, 2));
+                    WinValue = WinValues.MidWinValues.ElementAt(random.Next(0, WinValues.numberOfWinTypes));
                     break;
                 case 2:
-                    WinValue = WinValues.HighWinValues.ElementAt(new Random().Next(0, 2));
+                    WinValue = WinValues.HighWinValues.ElementAt(random.Next(0, WinValues.numberOfWinTypes));
                     break;
             }
-
+            IsWinner = winManager.isWinner;
         }
     }
 }

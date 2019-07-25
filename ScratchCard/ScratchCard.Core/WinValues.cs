@@ -12,5 +12,7 @@ namespace ScratchCard.Core
         public static readonly decimal[] MidWinValues = { 10, 20, 50 };
         public static readonly decimal[] HighWinValues = { 100, 1000, 100000 };
 
+        public static readonly int numberOfWinTypes = 3;
+
     }
 }
