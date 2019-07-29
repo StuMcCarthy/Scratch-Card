@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:ScratchCard.FrontEnd"
         mc:Ignorable="d" Height="300" Width="300" Title= "">
     <Grid>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="70" Margin="20,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="40,61,0,0" VerticalAlignment="Top" Width="60" Click="Button_Click"/>
-        <Label x:Name="label_BC" Content="Basic Card" HorizontalAlignment="Center" Margin="30,30,183.6,214.4" VerticalAlignment="Center" Width="80" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="70" Margin="20,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="40,61,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
+        <Label x:Name="label_BC" Content="Basic Card" HorizontalAlignment="Center" Margin="30,30,163.6,214.4" VerticalAlignment="Center" Width="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="button1" Content="Config" HorizontalAlignment="Left" Margin="185,61,0,0" VerticalAlignment="Top" Width="75" Click="Button1_Click"/>
 
     </Grid>
 </Window>

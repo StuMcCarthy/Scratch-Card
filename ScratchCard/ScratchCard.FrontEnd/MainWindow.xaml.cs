@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ScratchCard.Core;
 using ScratchCard.FrontEnd.Cards;
+using ScratchCard.FrontEnd.Config;
 
 namespace ScratchCard.FrontEnd
 {
@@ -33,6 +34,12 @@ namespace ScratchCard.FrontEnd
         {
             Basic_Card basic_CardForm = new Basic_Card();
             basic_CardForm.Show();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            ConfigEditor config = new ConfigEditor();
+            config.Show();
         }
     }
 }

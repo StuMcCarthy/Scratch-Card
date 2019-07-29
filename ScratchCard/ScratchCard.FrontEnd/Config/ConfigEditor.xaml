@@ -1,0 +1,25 @@
+﻿<Window x:Class="ScratchCard.FrontEnd.Config.ConfigEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScratchCard.FrontEnd.Config"
+        mc:Ignorable="d"
+        Title="Configuration Setup" Height="400" Width="400" ShowInTaskbar="False" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ToolTip="Various to change" MinWidth="200" MinHeight="200">
+    <Grid>
+        <GroupBox x:Name="groupBoxBackgroundStyle" Header="BackgroundStyle" HorizontalAlignment="Left" Height="100" Margin="10,20,0,0" VerticalAlignment="Top" Width="150">
+            <Grid HorizontalAlignment="Left" Height="65" Margin="0,10,-2.8,0" VerticalAlignment="Top" Width="130">
+                <CheckBox x:Name="checkBoxBackgroundSolid" Content="Solid Style" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="110" Height="20" Checked="CheckBoxBackgroundSolid_Checked"/>
+                <CheckBox x:Name="checkBoxBackgroundGradient" Content="Gradient Style" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" Height="20" Checked="CheckBoxBackgroundGradient_Checked"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxWinRate" Header="Win Rate" HorizontalAlignment="Left" Height="115" Margin="10,135,0,0" VerticalAlignment="Top" Width="170">
+            <Grid HorizontalAlignment="Left" Height="90" Margin="0,10,0,-7.2" VerticalAlignment="Top" Width="145">
+                <CheckBox x:Name="checkBox1Diff" Content="Lowest WinRate" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" Height="20" Checked="CheckBox1Diff_Checked"/>
+                <CheckBox x:Name="checkBox2Diff" Content="Mid WinRate" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="110" Height="20" Checked="CheckBox2Diff_Checked"/>
+                <CheckBox x:Name="checkBox5Diff" Content="Highest WinRate" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="110" Height="20" Checked="CheckBox5Diff_Checked"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

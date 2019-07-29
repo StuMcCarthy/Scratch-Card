@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace ScratchCard.Core
 {
@@ -11,6 +12,7 @@ namespace ScratchCard.Core
         public bool isWinner { get; private set; }
         public int winRarity { get; private set; }
 
+
         private int winningIndex;
         private int numberToMatch;
 
@@ -18,13 +20,20 @@ namespace ScratchCard.Core
         private readonly int midWinIndex = 1;
         private readonly int highWinIndex = 2;
 
+        private int winDivider;
 
         Random random;
         public WinRateManager()
         {
+            LoadConfiguration();
             random = new Random();
             SetWinRarity();
             SetIfWinner();
+        }
+
+        private void LoadConfiguration()
+        {
+            winDivider = int.Parse(ConfigurationManager.AppSettings["WinDifficulty"]);
         }
 
         private void SetWinRarity()
@@ -46,17 +55,17 @@ namespace ScratchCard.Core
 
         private void SetIfWinner()
         {
-            int winDivider = 50;
+            
             switch (winRarity)
             {
                 case 0:
-                    winDivider = 100;
+                    winDivider = winDivider * 100;
                     break;
                 case 1:
-                    winDivider = 10;
+                    winDivider = winDivider * 10;
                     break;
                 case 2:
-                    winDivider = 1;
+                    winDivider = winDivider * 1;
                     break;
             }
 
