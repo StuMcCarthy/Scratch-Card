@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ScratchCard.Core;
+using ScratchCard.FrontEnd.Presentation;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using ScratchCard.Core;
 
 namespace ScratchCard.FrontEnd.Cards
 {
@@ -20,14 +12,19 @@ namespace ScratchCard.FrontEnd.Cards
     /// </summary>
     public partial class Basic_Card : Window
     {
-        BasicCard card;
-
+        readonly BasicCard card;
         public Basic_Card()
         {
             InitializeComponent();
+            InitialiseView();
             card = new BasicCard();
             labelCashAmount.Content = string.Format("£{0}", card.WinValue);
             labelIsWinner.Content = DisplayIsWinner(card);
+        }
+
+        private void InitialiseView()
+        {
+            Grid_Panel.Background = new BackgroundDesigner().SetBackgroundColour();
         }
 
         private void RevealLabel(Label labelToReveal)
@@ -54,5 +51,7 @@ namespace ScratchCard.FrontEnd.Cards
         {
             RevealLabel(labelIsWinner);
         }
+
+
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ScratchCard.FrontEnd.Cards"
         mc:Ignorable="d"
         Title="Basic Card" Height="300" Width="328.2">
-    <Grid>
+    <Grid x:Name="Grid_Panel" Background="#FF00165F">
         <Label x:Name="label" Content="Are you a Winner of ..." HorizontalAlignment="Center" Margin="24,20,23.6,0" VerticalAlignment="Top" Width="274" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
         <Label x:Name="labelCashAmount" Visibility="Hidden" Content="" HorizontalAlignment="Center" Margin="24,66,23.6,0" VerticalAlignment="Top" Width="274" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
         <Button x:Name="btnRevealAmount" Content="Reveal Amount" HorizontalAlignment="Center" Margin="80,112,81.6,0" VerticalAlignment="Top" Width="160" Height="28" Click="BtnRevealAmount_Click"/>
