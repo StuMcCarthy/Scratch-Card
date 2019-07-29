@@ -10,7 +10,7 @@ namespace ScratchCard.FrontEnd.Presentation
 {
     class BackgroundDesigner
     {
-        Random random = new Random();
+        readonly Random random = new Random();
 
         public SolidColorBrush SetBackgroundColour()
         {
@@ -37,6 +37,53 @@ namespace ScratchCard.FrontEnd.Presentation
                 }
             }
             return new SolidColorBrush(color);
+        }
+
+        public LinearGradientBrush SetBackgroundGradient()
+        {
+            Color colorStart = new Color();
+            Color colorEnd = new Color();
+            for (int i = 0; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        colorStart.R = (byte)random.Next(0, 255);
+                        break;
+                    case 1:
+                        colorStart.G = (byte)random.Next(0, 255);
+                        break;
+                    case 2:
+                        colorStart.B = (byte)random.Next(0, 255);
+                        break;
+                    case 3:
+                        colorStart.A = (byte)random.Next(50, 255);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            for (int j = 0; j < 4; j++)
+            {
+                switch (j)
+                {
+                    case 0:
+                        colorEnd.R = (byte)random.Next(0, 255);
+                        break;
+                    case 1:
+                        colorEnd.G = (byte)random.Next(0, 255);
+                        break;
+                    case 2:
+                        colorEnd.B = (byte)random.Next(0, 255);
+                        break;
+                    case 3:
+                        colorEnd.A = (byte)random.Next(50, 255);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return new LinearGradientBrush(colorStart, colorEnd, 90);
         }
     }
 }

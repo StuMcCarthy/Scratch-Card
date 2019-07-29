@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Configuration;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -25,6 +26,7 @@ namespace ScratchCard.FrontEnd
         public MainWindow()
         {
             InitializeComponent();
+            Title = ConfigurationManager.AppSettings["BaseWindowName"];
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

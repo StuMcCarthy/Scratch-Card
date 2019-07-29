@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScratchCard.FrontEnd"
-        mc:Ignorable="d"
-        Title="Front Page" Height="300" Width="300">
+        mc:Ignorable="d" Height="300" Width="300" Title= "">
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="70" Margin="20,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="40,61,0,0" VerticalAlignment="Top" Width="60" Click="Button_Click"/>

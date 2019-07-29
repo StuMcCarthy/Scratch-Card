@@ -4,6 +4,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Configuration;
 
 namespace ScratchCard.FrontEnd.Cards
 {
@@ -24,7 +25,22 @@ namespace ScratchCard.FrontEnd.Cards
 
         private void InitialiseView()
         {
-            Grid_Panel.Background = new BackgroundDesigner().SetBackgroundColour();
+            LoadConfiguration();
+        }
+
+        private void LoadConfiguration()
+        {
+            switch (ConfigurationManager.AppSettings["SolidOrGradient"])
+            {
+                case "Solid":
+                    Grid_Panel.Background = new BackgroundDesigner().SetBackgroundColour();
+                    break;
+                case "Gradient":
+                    Grid_Panel.Background = new BackgroundDesigner().SetBackgroundGradient();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void RevealLabel(Label labelToReveal)
