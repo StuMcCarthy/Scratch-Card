@@ -20,6 +20,7 @@ namespace ScratchCard.FrontEnd.Config
     /// </summary>
     public partial class ConfigEditor : Window
     {
+        Configuration config;
         public ConfigEditor()
         {
             InitializeComponent();
@@ -28,13 +29,14 @@ namespace ScratchCard.FrontEnd.Config
 
         private void Initilise()
         {
+            config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             InitiliseBackgroundStyleBoxes();
             InitiliseWinDifficulty();
         }
 
         private void InitiliseBackgroundStyleBoxes()
         {
-            switch (ConfigurationManager.AppSettings["SolidOrGradient"])
+            switch (LoadSetting("SolidOrGradient"))
             {
                 case "Solid":
                     checkBoxBackgroundSolid.IsChecked = true;
@@ -51,7 +53,7 @@ namespace ScratchCard.FrontEnd.Config
         }
         private void InitiliseWinDifficulty()
         {
-            switch (ConfigurationManager.AppSettings["WinDifficulty"])
+            switch (LoadSetting("WinDifficulty"))
             {
                 case "1":
                     checkBox1Diff.IsChecked = true;
@@ -74,13 +76,25 @@ namespace ScratchCard.FrontEnd.Config
         }
 
 
+        private string LoadSetting(string key)
+        {
+            return ConfigurationManager.AppSettings[key];
+        }
+        private void SaveSetting(string key, string value)
+        {
+            config.AppSettings.Settings[key].Value = value;
+            config.Save(ConfigurationSaveMode.Full, true);
+            ConfigurationManager.RefreshSection("appSettings");
+        }
+
+
         private void SetBackgroundStyle(string style)
         {
-            ConfigurationManager.AppSettings.Set("SolidOrGradient", style);
+            SaveSetting("SolidOrGradient", style);
         }
         private void SetWinDifficulty(string difficulty)
         {
-            ConfigurationManager.AppSettings.Set("WinDifficulty", difficulty);
+            SaveSetting("WinDifficulty", difficulty);
         }
 
 
