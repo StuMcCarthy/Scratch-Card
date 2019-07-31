@@ -7,7 +7,7 @@ using System.Configuration;
 
 namespace ScratchCard.Core
 {
-    class WinRateManager
+    public class WinRateManager
     {
         public bool isWinner { get; private set; }
         public int winRarity { get; private set; }
@@ -71,10 +71,20 @@ namespace ScratchCard.Core
 
             numberToMatch = random.Next(0, 999);
 
-            if ((winningIndex / winDivider) == (numberToMatch / winDivider))
+            if (GetWinningNumber() == GetPlayersNumber())
                 isWinner = true;
             else
                 isWinner = false;
+        }
+
+        public int GetWinningNumber()
+        {
+            return winningIndex / winDivider;
+        }
+
+        public int GetPlayersNumber()
+        {
+            return numberToMatch / winDivider;
         }
     }
 }

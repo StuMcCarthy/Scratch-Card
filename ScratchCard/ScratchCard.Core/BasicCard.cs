@@ -8,7 +8,7 @@ namespace ScratchCard.Core
 {
     public class BasicCard
     {
-        WinRateManager winManager;
+        public readonly WinRateManager winManager;
         public readonly decimal WinValue;
         public readonly bool IsWinner;
         Random random = new Random(DateTime.Now.Millisecond);

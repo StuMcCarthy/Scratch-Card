@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="Basic Card" Height="300" Width="328.2">
     <Grid x:Name="Grid_Panel" Background="#FF00165F">
-        <Label x:Name="label" Content="Are you a Winner of ..." HorizontalAlignment="Center" Margin="24,20,23.6,0" VerticalAlignment="Top" Width="274" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
-        <Label x:Name="labelCashAmount" Visibility="Hidden" Content="" HorizontalAlignment="Center" Margin="24,66,23.6,0" VerticalAlignment="Top" Width="274" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
-        <Button x:Name="btnRevealAmount" Content="Reveal Amount" HorizontalAlignment="Center" Margin="80,112,81.6,0" VerticalAlignment="Top" Width="160" Height="28" Click="BtnRevealAmount_Click"/>
-        <Label x:Name="labelIsWinner" Visibility="Hidden" Content="" HorizontalAlignment="Center" Margin="24,161,23.6,0" VerticalAlignment="Top" Width="274" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
-        <Button x:Name="btnRevealWinner" Visibility="Hidden" Content="Are You a Winner?" HorizontalAlignment="Center" Margin="80,207,81.6,0" VerticalAlignment="Top" Width="160" Height="28" Click="BtnRevealWinner_Click" IsEnabled="False"/>
+        <Label x:Name="label" Content="Are you a Winner ..." HorizontalAlignment="Center" Margin="24,20,23.6,0" VerticalAlignment="Top" Width="274" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <Label x:Name="labelCashAmount" Visibility="Hidden" Content="" HorizontalAlignment="Center" Margin="24,66,166.6,0" VerticalAlignment="Top" Width="131" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <Button x:Name="btnRevealAmount" Content="Reveal Amount" HorizontalAlignment="Center" Margin="24,112,166.6,0" VerticalAlignment="Top" Width="131" Height="28" Click="BtnRevealAmount_Click"/>
+        <Label x:Name="labelIsWinner" Visibility="Hidden" Content="" HorizontalAlignment="Center" Margin="165,66,23.6,0" VerticalAlignment="Top" Width="133" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <Button x:Name="btnRevealWinner" Visibility="Hidden" Content="Are You a Winner?" HorizontalAlignment="Center" Margin="165,112,23.6,0" VerticalAlignment="Top" Width="133" Height="28" Click="BtnRevealWinner_Click" IsEnabled="False"/>
+        <Label x:Name="labelWinningNumber" Content="..." HorizontalAlignment="Center" Margin="24,199,166.6,0" VerticalAlignment="Top" Width="131" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Visibility="Hidden"/>
+        <Label x:Name="labelPlayerNumber" Content="..." HorizontalAlignment="Center" Margin="167,199,23.6,0" VerticalAlignment="Top" Width="131" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Visibility="Hidden"/>
 
     </Grid>
 </Window>

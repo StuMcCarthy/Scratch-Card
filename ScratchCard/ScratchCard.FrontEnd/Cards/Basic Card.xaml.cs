@@ -21,6 +21,8 @@ namespace ScratchCard.FrontEnd.Cards
             card = new BasicCard();
             labelCashAmount.Content = string.Format("£{0}", card.WinValue);
             labelIsWinner.Content = DisplayIsWinner(card);
+            labelWinningNumber.Content = card.winManager.GetWinningNumber();
+            labelPlayerNumber.Content = card.winManager.GetPlayersNumber();
         }
 
         private void InitialiseView()
@@ -66,6 +68,8 @@ namespace ScratchCard.FrontEnd.Cards
         private void BtnRevealWinner_Click(object sender, RoutedEventArgs e)
         {
             RevealLabel(labelIsWinner);
+            RevealLabel(labelWinningNumber);
+            RevealLabel(labelPlayerNumber);
         }
 
 
